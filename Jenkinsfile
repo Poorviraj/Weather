@@ -29,7 +29,7 @@ pipeline {
         stage('start container'){
             steps{
                 echo "this is a stage for starting container"
-                sh "docker compose up -d"
+                sh "docker compose down && docker compose up -d"
             }
         }
     }
